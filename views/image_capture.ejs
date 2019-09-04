@@ -1,0 +1,52 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.445.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="image-capture.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <button class="btn btn-success" id="startButton_1">Take photo</button>
+                <div class="camera">
+                    <div class="video-overlay-1"><p class="overlay-text">Image 1 Done. <br> &#9989; </p></div>
+                    <video id="video_1"></video>
+                </div>
+                <canvas id="canvas_1"></canvas>
+            </div>
+            <div class="col-xs-6">
+                <button class="btn btn-success" id="startButton_2" disabled>Take photo</button>
+                <div class="camera">
+                    <div class="video-overlay-2"><p class="overlay-text">Image 2 Done. <br> &#9989; </p></div>
+                    <video id="video_2"></video>
+                </div>
+                <canvas id="canvas_2"></canvas>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="compare-div">
+        <button class="btn btn-primary btn-lg" id="compareButton">Compare Faces</button>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Congratulation! Face matched</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Random Message with Face comparison will be set here -->  
+                    <img id="message-image" src="emoji.png" alt="Smiley face" height="160" width="160">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

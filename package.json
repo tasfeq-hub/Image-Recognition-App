@@ -1,0 +1,19 @@
+{
+  "name": "IAS",
+  "version": "1.0.0",
+  "description": "first prototype app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "bootstrap": "^4.3.1",
+    "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "express": "*",
+    "uniq": "^1.0.1"
+  },
+  "author": "Tasfeq",
+  "license": "ISC"
+}
